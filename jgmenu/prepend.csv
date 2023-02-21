@@ -1,0 +1,14 @@
+Firefox,firefox,firefox
+Archivos,pcmanfm,nemo
+Terminal,lxterminal,terminal
+Centro de control, /opt/Loc-OScc/Loc-OScc.sh, settings
+Personalizar,^checkout(openbox),applications-webapps
+Aplicaciones,^checkout(lx-apps),applications-all
+^sep()
+Salir,lxde-logout,system-shut-down
+
+^tag(openbox)
+Panel, tint2conf, configuration_section
+Apariencia, lxappearance, preferences-desktop-theme
+
+^tag(lx-apps)
