@@ -1,6 +1,0 @@
-@pcmanfm --desktop --profile LXDE
-tint2
-#cmst -m
-#tint2 -c /home/ISO/.config/tint2/Default.tint2rc
-#tint2 -c /home/ISO/.config/tint2/Dock.tint2rc
-picom --config /home/ISO/.config/picom/picom2.conf
