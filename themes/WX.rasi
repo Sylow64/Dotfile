@@ -1,0 +1,160 @@
+/*-*- mode: css; -*-*/
+
+configuration {
+    show-icons: true; 
+}
+
+/* global settings and color variables */
+* {
+    maincolor:        #FFFFFF;
+    highlight:        bold #50fa7b;
+    urgentcolor:      #ff79c6;
+
+    fg:               #ffffff;
+    bg:               rgba(250,250,250,0.96);
+    blackselect:      rgba(195,195,195,1);
+    background-color:  transparent;
+    cyan:             #2970EA;
+    font: "Noto Sans CJK SC 8";
+}
+
+window {
+    anchor: center;
+    background-color: @bg;
+    border: 0;
+    border-radius: 6px;
+    border-color: transparent;
+    margin: 0;
+    padding: 0px;
+    width: 38%;
+    height: 75%;
+}
+
+mainbox {
+    border-radius: 0px;
+    padding: 15px;
+    background-color: rgba(230,230,230,0);
+    children: [inputbar, message, listview];
+}
+
+message {
+    padding: 6px 10px;
+    background-color:@bg;
+}
+
+textbox {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0);
+    text-color:#2A2A2A;
+    font: "Noto Sans CJK SC 12";
+}
+
+listview {
+    columns: 4;
+    lines: 7;
+    fixed-height: true;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 0px;
+    padding: 15px 15px 0px 15px;
+    background: @bg;
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                #676E75;
+    border-radius:               1px;
+    background-color:            #DEDEDE;
+    spacing:                     0px;
+}
+
+element {
+  padding: 8px;
+  orientation: vertical;
+  border-radius: 6px;
+  spacing: 15px;
+}
+
+element-icon {
+   size: 36;
+   horizontal-align: 0.5;
+   vertical-align: 0.5; 
+}
+
+element-text {
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  text-color: #2A2A2A;
+}
+
+element normal.normal {
+    padding: 5px 5px;
+    background-color: transparent;
+    text-color: #2A2A2A;
+}
+
+element normal.urgent {
+    background-color: @bg;
+    text-color: @urgentcolor;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color: @maincolor;
+}
+
+element selected.normal {
+    background-color: @blackselect;
+    border:       0px solid;
+    border-color: #646C73;
+    border-radius: 4px;
+    text-color:       @fg;
+}
+
+element selected.urgent {
+    background-color: @urgentcolor;
+    text-color:       @bg;
+}
+
+element selected.active {
+    background-color: @maincolor;
+    text-color:       @bg;
+    border-color: #646C73;
+    border-radius: 4px;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element alternate.urgent {
+    background-color: @bg;
+    text-color:       @urgentcolor;
+}
+
+element alternate.active {
+    background-color: @bg;
+    text-color:       @maincolor;
+}
+
+inputbar {
+    eneable: true; 
+    padding: 8px;
+    background-color: #DEDEDE;
+    border: 0px;
+    border-radius:  4px 4px 4px 4px;
+    border-color:   #646C73;
+    spacing: 30px;
+    children: [ "entry" ];
+}
+entry {
+    placeholder:                 "Buscar...";
+    placeholder-color:           inherit;
+    font: "Noto Sans CJK SC Bold 12px";
+    background-color: transparent;
+    text-color: #7D7D7D;
+}
+prompt {
+  enabled: false;
+}

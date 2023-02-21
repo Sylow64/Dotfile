@@ -1,0 +1,143 @@
+/*-*- mode: css; -*-*/
+
+configuration {
+    show-icons: true; 
+}
+
+/* global settings and color variables */
+* {
+    maincolor:        #50fa7b;
+    highlight:        bold #50fa7b;
+    urgentcolor:      #ff79c6;
+
+    fg:               #f8f8f2;
+    bg:               rgba(18,25,35,0);
+    blackselect:      rgba(8,11,15,0.9);
+    background-color:  transparent;
+    cyan:             #8be9fd;
+    font: "Noto Sans CJK SC 8";
+}
+
+window {
+    anchor: center;
+    background-color: @bg;
+    border: 0;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0px;
+    width: 38%;
+    height: 73%;
+}
+
+mainbox {
+    border-radius: 6px;
+    padding: 20px;
+    background-color: rgba(13,18,26,0.98);
+    children: [inputbar, message, listview];
+}
+
+message {
+    padding: 6px 10px;
+    background-color:@bg;
+}
+
+textbox {
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgba(28,28,28,0.8);
+    text-color:@fg;
+    font: "Noto Sans CJK SC 10";
+}
+
+listview {
+    columns: 4;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 0px;
+    padding: 15px 15px 0px 15px;
+    background: @bg;
+}
+
+element {
+  padding: 17px;
+  orientation: vertical;
+  border-radius: 6px;
+}
+
+element-icon {
+   size: 36;
+   horizontal-align: 0.5;
+   vertical-align: 0.5; 
+}
+
+element-text {
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  text-color: inherit;
+}
+
+element normal.normal {
+    padding: 5px 5px;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: @bg;
+    text-color: @urgentcolor;
+}
+
+element normal.active {
+    background-color: @bg;
+    text-color: @maincolor;
+}
+
+element selected.normal {
+    background-color: @blackselect;
+    text-color:       @fg;
+}
+
+element selected.urgent {
+    background-color: @urgentcolor;
+    text-color:       @bg;
+}
+
+element selected.active {
+    background-color: @maincolor;
+    text-color:       @bg;
+}
+
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element alternate.urgent {
+    background-color: @bg;
+    text-color:       @urgentcolor;
+}
+
+element alternate.active {
+    background-color: @bg;
+    text-color:       @maincolor;
+}
+
+inputbar { 
+    padding: 3px;
+    background-color: #000000;
+    border: 2px 2px 2px 2px;
+    border-radius:  0px;
+    border-color: #3563A4;
+    spacing: 0px;
+}
+
+entry {
+    font: "Noto Sans CJK SC Bold 10px";
+    background-color: #000000;
+    text-color:@fg;
+}
+
+prompt {
+  enabled: false;
+}
