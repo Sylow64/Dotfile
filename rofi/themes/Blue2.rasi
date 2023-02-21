@@ -1,0 +1,136 @@
+/**
+ * Author: Primetoxinz
+ */
+* {
+    text-color:                  #f2f2f2;
+    background-color:            #15191F;
+    lightbg:                     #534c48;
+    red:                         #D34953;
+    orange:                      #faa41a; 
+    blue:                        #5475AD;
+    white:                       #7EA4BB; 
+
+    selected-normal-foreground:  @foreground;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @background;
+    selected-urgent-foreground:  @foreground;
+    urgent-foreground:           @foreground;
+    alternate-urgent-background: @background;
+    active-foreground:           @foreground;
+    selected-active-foreground:  @foreground;
+    alternate-normal-foreground: @foreground;
+    alternate-active-background: @blue;
+    bordercolor:                 @white;
+    normal-background:           @background;
+    selected-normal-background:  @blue;
+    separatorcolor:              @orange;
+    spacing:                     2;
+    urgent-background:           @red;
+    alternate-urgent-foreground: @foreground;
+    selected-urgent-background:  @red;
+    alternate-active-foreground: @foreground;
+    selected-active-background:  @blue;
+    active-background:           @orange;
+}
+window {
+    border:     2px;
+    border-color: #4D535A;
+    text-color: @foreground;
+    background-color: rgba ( 0, 0, 0, 0 % );
+    padding:    10px;
+    text-color: @bordercolor;
+    background-color: @background;
+    width:      47%;
+}
+entry {
+    placeholder:        "Buscar";
+    placeholder-color:  #2B2E33;
+}
+mainbox {
+    border:  2;
+    padding: 2;
+}
+message {
+    border:     3px dash 0px 0px ;
+    text-color: @separatorcolor;
+    padding:    5px 5px 5px ;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    fixed-height: 4;
+    border:       2px 2px 2px ;
+    padding:      4px;
+    text-color: @separatorcolor;
+    lines: 7;
+    columns: 2;
+}
+element {
+    border: 2px;
+    padding: 5px;
+}
+element-icon {
+  size: 1.2em;
+}
+element.normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+element.normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+element.normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+}
+element.selected.normal {
+    text-color: @active-foreground;
+    background-color: @selected-normal-background;
+}
+element.selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+element.selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+element.alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+element.alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+element.alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+}
+mode-switcher {
+    border: 1px dash 0px 0px ;
+}
+button selected {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+inputbar {
+    width:   20%;
+    spacing: 0;
+    border: 2px ;
+}
+button normal {
+    text-color: @foreground;
+}
+
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}
